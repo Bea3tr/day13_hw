@@ -25,7 +25,9 @@ public class UserController {
 
             // Check correct password
             if (!user.getPassword().equals(PASSWORD) && userList.size() > 2) {
+                String captcha = "/captcha/" + generateCaptcha();
                 model.addAttribute("user", new User());
+                model.addAttribute("captcha", captcha);
                 return "unsuccessful";
             }
             else if (user.getPassword().equals(PASSWORD))

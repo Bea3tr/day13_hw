@@ -36,13 +36,5 @@ public class IndexController {
         model.addAttribute("user", new User());
         return "index";
     }
-
-    // @GetMapping("/user")
-    // public String getCaptcha(Model model) {
-
-    //     model.addAttribute("user", new User());
-
-    //     return "unsuccessful";
-    // }
     
 }
