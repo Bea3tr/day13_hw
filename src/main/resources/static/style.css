@@ -1,14 +1,43 @@
+body {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color:darkblue;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    text-align: right;
+}
+
 input, img {
     width: 150px;
     height: 15px;
-    padding:0px;
+    padding: 0px;
 }
 
-img {
+button {
+    width: 75px;
+    height:auto;
+}
+
+.captcha {
     height: auto;
     border:solid 1.5px;
 }
 
+.secret {
+    height: 250px;
+    width: auto;
+    border: solid goldenrod 2px;
+}
+
 .failed {
     color: red;
+    margin: 10% 25%;
+    border: solid darkred 5px;
+    font-size: 44px;
 }

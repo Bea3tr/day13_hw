@@ -30,9 +30,12 @@ public class UserController {
                 model.addAttribute("captcha", captcha);
                 return "unsuccessful";
             }
-            else if (user.getPassword().equals(PASSWORD))
+            else if (user.getPassword().equals(PASSWORD)) {
+                String secret = "/images/" + generateSecret();
+                model.addAttribute("secret", secret);
                 return "secret";
-
+            }
+                
             model.addAttribute("user", user);
             model.addAttribute(USER_LIST, userList);
 
