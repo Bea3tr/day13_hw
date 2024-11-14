@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+    <h1>My login</h1>
+
+    <form method="POST" action="/user" data-th-object="${user}">
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td>
+                    <input type="text" data-th-field="*{name}">
+                </td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td>
+                    <input type="password" data-th-field="*{password}">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Login</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    
+</body>
+</html>

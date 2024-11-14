@@ -1,0 +1,14 @@
+input, img {
+    width: 150px;
+    height: 15px;
+    padding:0px;
+}
+
+img {
+    height: auto;
+    border:solid 1.5px;
+}
+
+.failed {
+    color: red;
+}
