@@ -16,12 +16,18 @@
                 <td>Name: </td>
                 <td>
                     <input type="text" data-th-field="*{name}">
+                    <div data-th-if="${#fields.hasErrors('name')}"
+                         data-th-errors="*{name}" data-th-errorclass="error">
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>Password: </td>
                 <td>
                     <input type="password" data-th-field="*{password}">
+                    <div data-th-if="${#fields.hasErrors('password')}"
+                         data-th-errors="*{password}" data-th-errorclass="error">
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -34,7 +40,9 @@
                 <td>Captcha: </td>
                 <td>
                     <input type="text" data-th-field="*{captcha}">
-                    
+                    <div data-th-if="${#fields.hasE rrors('captcha')}"
+                         data-th-errors="*{captcha}" data-th-errorclass="error">
+                    </div> 
                 </td>
             </tr>
             <tr>
@@ -44,7 +52,6 @@
                 </td>
             </tr>
         </table>
-
     </form>
     
 </body>

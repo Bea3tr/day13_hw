@@ -2,6 +2,7 @@ package ssf.day13_hw.models;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,11 @@ public class UserController {
     @PostMapping
     public String postUser(Model model,
         @ModelAttribute User user,
+        BindingResult bindings,
         HttpSession sess) {
+
+            if(bindings.hasErrors())
+                return "index";
 
             // Check if session has the list
             List<User> userList = getList(sess);
